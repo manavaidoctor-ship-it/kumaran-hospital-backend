@@ -8,6 +8,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("✅ Kumaran Hospital Backend is Running Successfully!");
+});
+
+
 // ✅ Create MySQL connection pool
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
